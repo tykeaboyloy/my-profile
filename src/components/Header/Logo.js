@@ -2,14 +2,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import profileImg from "@/public/profile2-img.jpeg";
+import profileImg2 from "@/public/profile3-img.jpeg";
 import PropType from "prop-types";
 import { TypeAnimation } from "react-type-animation";
+import { useState } from "react";
+import { redirect } from "next/navigation";
 const Logo = (props) => {
+  const [profile, setProfile] = useState(profileImg);
   return (
     <Link href="/" className="flex items-center text-dark dark:text-light">
       <div className="rounded-full overflow-hidden border border-solid border-dark dark:border-gray mr-2 md:mr-4 w-16">
         <Image
-          src={profileImg}
+          onMouseOver={(e) => setProfile(profileImg2)}
+          onMouseOut={(e) => setProfile(profileImg)}
+          onClick={(e) => redirect("/")}
+          src={profile}
           alt="TK logo"
           className="rounded-full"
           sizes=""
@@ -25,7 +32,7 @@ const Logo = (props) => {
       />
       <TypeAnimation
         cursor={false}
-        sequence={["TYKEA. ", 900, "TK. ", 900, "erreur. ", 900]}
+        sequence={["TYKEA. ", 900, "TK. ", 900, "error. ", 900]}
         repeat={Infinity}
         className="font-bold dark:font-semibold text-xl md:text-2xl text-accent dark:text-accentDark"
       />

@@ -1,22 +1,29 @@
 "use client";
 import Link from "next/link";
-import Logo from "./Logo";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  MoonIcon,
-  SunIcon,
-  TwitterIcon,
-  FacebookIcon,
-} from "../Icons";
+import { MoonIcon, SunIcon } from "../Icons";
 import siteMetadata from "@/src/utils/siteMetaData";
 import { useThemeSwitch } from "../Hooks/useThemeSwitch";
-import { useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { cx } from "@/src/utils";
 
 const Header = () => {
   const [mode, setMode] = useThemeSwitch();
   const [click, setClick] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setClick(false);
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const toggle = () => {
     setClick(!click);
@@ -26,6 +33,7 @@ const Header = () => {
       <button
         className="inline-block sm:hidden z-50 mx-7"
         onClick={toggle}
+        ref={dropdownRef}
         aria-label="Hamburger Menu"
       >
         <div className="w-8 cursor-pointer transition-all ease duration-300">

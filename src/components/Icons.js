@@ -335,7 +335,8 @@ export const MoonIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const FacebookIcon = ({ className, ...rest }) => {
+export const FacebookIcon = ({ className, isFooterFacebook, ...rest }) => {
+  let isFacebookFooter = isFooterFacebook;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +348,11 @@ export const FacebookIcon = ({ className, ...rest }) => {
     >
       <g clipPath="url(#b)">
         <path
-          className="dark:fill-light fill-dark"
+          className={`${
+            isFacebookFooter == true
+              ? "dark:fill-dark fill-light"
+              : "dark:fill-light fill-dark"
+          }`}
           d="M38.5 0H3.5A3.504 3.504 0 0 0 0 3.5v35a3.504 3.504 0 0 0 3.5 3.5h19.223V25.734h-5.018v-5.018h5.018v-3.785c0-5.003 3.055-7.73 7.496-7.73 2.127 0 3.955.159 4.486.23v5.2h-3.084c-2.413 0-2.877 1.147-2.877 2.83v3.705h5.759l-.75 5.018h-5.009V42H38.5a3.504 3.504 0 0 0 3.5-3.5v-35A3.504 3.504 0 0 0 38.5 0Z"
         />
       </g>
@@ -360,7 +365,8 @@ export const FacebookIcon = ({ className, ...rest }) => {
   );
 };
 
-export const LinkedinIcon = ({ className, ...rest }) => {
+export const LinkedinIcon = ({ className, isFooterLinkedIN, ...rest }) => {
+  let isLinkedINFooter = isFooterLinkedIN;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -372,11 +378,19 @@ export const LinkedinIcon = ({ className, ...rest }) => {
     >
       <g clipPath="url(#a)">
         <path
-          className="dark:fill-light fill-dark"
+          className={`${
+            isLinkedINFooter == true
+              ? "dark:fill-dark fill-light"
+              : "dark:fill-light fill-dark"
+          }`}
           d="M38.063 1.792H3.937A2.924 2.924 0 0 0 .985 4.679v34.263a2.924 2.924 0 0 0 2.954 2.881h34.124a2.93 2.93 0 0 0 2.954-2.89V4.67a2.93 2.93 0 0 0-2.953-2.878Z"
         />
         <path
-          className="dark:fill-dark fill-light"
+          className={`${
+            isLinkedINFooter == true
+              ? "dark:fill-light fill-dark"
+              : "dark:fill-dark fill-light"
+          }`}
           d="M6.91 16.797h5.943v19.12H6.91v-19.12Zm2.973-9.516a3.445 3.445 0 1 1 0 6.891 3.445 3.445 0 0 1 0-6.89Zm6.697 9.516h5.696v2.625h.08c.793-1.503 2.73-3.088 5.62-3.088 6.018-.013 7.133 3.948 7.133 9.083v10.5h-5.942v-9.302c0-2.215-.04-5.067-3.088-5.067s-3.566 2.415-3.566 4.922v9.447H16.58v-19.12Z"
         />
       </g>
@@ -389,7 +403,8 @@ export const LinkedinIcon = ({ className, ...rest }) => {
   );
 };
 
-export const TwitterIcon = ({ className, ...rest }) => {
+export const TwitterIcon = ({ className, isFooterTwitter, ...rest }) => {
+  let isTwitterFooter = isFooterTwitter;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -401,8 +416,11 @@ export const TwitterIcon = ({ className, ...rest }) => {
     >
       <g clipPath="url(#a)">
         <path
-          // fill="#1D9BF0"
-          className="dark:fill-light fill-dark"
+          className={`${
+            isTwitterFooter == true
+              ? "dark:fill-dark fill-light"
+              : "dark:fill-light fill-dark"
+          }`}
           d="M37.7 13.24c.026.37.026.74.026 1.114 0 11.386-8.668 24.517-24.518 24.517v-.006A24.394 24.394 0 0 1 0 35.002a17.303 17.303 0 0 0 12.753-3.571 8.627 8.627 0 0 1-8.05-5.984 8.584 8.584 0 0 0 3.89-.149 8.617 8.617 0 0 1-6.912-8.446v-.11a8.562 8.562 0 0 0 3.91 1.08A8.627 8.627 0 0 1 2.926 6.315a24.457 24.457 0 0 0 17.758 9.002 8.622 8.622 0 0 1 2.494-8.233 8.626 8.626 0 0 1 12.19.374 17.29 17.29 0 0 0 5.473-2.092 8.649 8.649 0 0 1-3.788 4.766A17.135 17.135 0 0 0 42 8.776a17.504 17.504 0 0 1-4.3 4.464Z"
         />
       </g>

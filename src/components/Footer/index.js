@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
+import {
+  DribbbleIcon,
+  FacebookIcon,
+  GithubIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 
@@ -47,7 +53,10 @@ const Footer = () => {
           aria-label="Reach out to me via LinkedIn"
           target="_blank"
         >
-          <LinkedinIcon className="hover:scale-125 transition-all ease duration-200" />
+          <LinkedinIcon
+            className="hover:scale-125 transition-all ease duration-200"
+            isFooterLinkedIN={true}
+          />
         </a>
         <a
           href={siteMetadata.twitter}
@@ -55,7 +64,10 @@ const Footer = () => {
           aria-label="Reach out to me via Twitter"
           target="_blank"
         >
-          <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
+          <TwitterIcon
+            className="hover:scale-125 transition-all ease duration-200"
+            isFooterTwitter={true}
+          />
         </a>
         <a
           href={siteMetadata.github}
@@ -66,31 +78,27 @@ const Footer = () => {
           <GithubIcon className="fill-light dark:fill-dark  hover:scale-125 transition-all ease duration-200" />
         </a>
         <a
-          href={siteMetadata.dribbble}
+          href={siteMetadata.facebook}
           className="inline-block w-6 h-6 mr-4"
           aria-label="Check my profile on Dribbble"
           target="_blank"
         >
-          <DribbbleIcon className="hover:scale-125 transition-all ease duration-200" />
+          <FacebookIcon
+            className="hover:scale-125 transition-all ease duration-20"
+            isFooterFacebook={true}
+          />
         </a>
       </div>
 
       <div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
-        <span className="text-center">
-          &copy;2023 CodeBucks. All rights reserved.
-        </span>
+        <span className="text-center">Amazing</span>
         <Link
           href="/sitemap.xml"
           className="text-center underline my-4 md:my-0"
         >
           sitemap.xml
         </Link>
-        <div className="text-center">
-          Made with &hearts; by{" "}
-          <a href="https://devdreaming.com" className="underline" target="_blank">
-            CodeBucks
-          </a>
-        </div>
+        <div className="text-center">Made with 💗 and ☕️</div>
       </div>
     </footer>
   );

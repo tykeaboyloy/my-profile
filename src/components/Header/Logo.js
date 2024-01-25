@@ -36,10 +36,6 @@ const Logo = (props) => {
         repeat={Infinity}
         className="font-bold dark:font-semibold text-xl md:text-2xl text-accent dark:text-accentDark"
       />
-
-      {/* <span className="font-bold dark:font-semibold text-lg md:text-xl">
-        <h1>{props.name}</h1>
-      </span> */}
     </Link>
   );
 };

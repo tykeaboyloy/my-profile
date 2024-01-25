@@ -1,19 +1,19 @@
 // please update required information
 const siteMetadata = {
-  title: "TK",
-  author: "Tykeaboyloy",
-  headerTitle: "Next.js Blog",
-  description: "A blog created with Next.js, Tailwind.css and contentlayer.",
+  title: "Tykea",
+  author: "Tykea",
+  headerTitle: "Tykea's personal website",
+  description: "A personal and blog website created with Next.js.",
   language: "en-us",
   theme: "system", // system, dark or light
-  siteUrl: "https://tykea.appverze.com/", // your website URL
+  siteUrl: "https://tykea.dev", // your website URL
   siteLogo: "/logo.png",
   socialBanner: "/social-banner.png", // add social banner in the public folder
   email: "tykeaboyloy@gmail.com",
-  github: "https://github.com/tykeaboyloy",
+  github: "https://github.com/tykealy",
   twitter: "https://twitter.com/tykeaboyloy",
   facebook: "https://facebook.com/tykeaboyloy",
-  youtube: "https://youtube.com/codebucks",
+  youtube: "https://www.youtube.com/@tykealy",
   linkedin: "https://www.linkedin.com/in/tykea/",
   locale: "en-US",
 };

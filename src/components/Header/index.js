@@ -29,7 +29,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-4 px-5 sm:px-10 flex justify-end items-center mb-2">
+    <header className=" p-4 px-5 sm:px-10 flex justify-end items-center sm:mx-8 md:mx-12 dark:bg-[#212121]">
       <button
         className="inline-block sm:hidden z-50 mx-7"
         onClick={toggle}

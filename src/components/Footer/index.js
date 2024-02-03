@@ -1,13 +1,7 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import {
-  DribbbleIcon,
-  FacebookIcon,
-  GithubIcon,
-  LinkedinIcon,
-  TwitterIcon,
-} from "../Icons";
+import { FacebookIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 

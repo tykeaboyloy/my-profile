@@ -1,4 +1,4 @@
-import gallery_1 from "./gallery_1.jpeg";
+import gallery_1 from "./gallery_1.jpg";
 import gallery_2 from "./gallery_2.jpeg";
 import gallery_3 from "./gallery_3.jpg";
 import gallery_4 from "./gallery_4.jpeg";

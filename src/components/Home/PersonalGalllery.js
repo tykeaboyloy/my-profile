@@ -1,22 +1,28 @@
-import Image from "next/image";
 import PropTypes from "prop-types";
+
 const PersonalGalery = ({ images }) => {
-  const imageClass = "rounded-2xl p-2 transform w-44 sm:w-64 object-cover";
+  const imageClass =
+    "rounded-2xl p-2 transform w-44 sm:w-64 min-w-[176px] sm:min-w-[256px] h-56 sm:h-80 object-cover group relative";
+
   return (
-    <div className="flex overflow-hidden py-5 space-x-5 md:space-x-12 sm:-mx-8  justify-center md:-mx-12 bg-transparent">
-      {images.map((img, index) => {
-        return (
-          <Image
-            key={index}
-            alt="Personal Gallery"
+    <div className="flex overflow-hidden py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-center">
+      {images.map((img, index) => (
+        <div className="group relative" key={index}>
+          <div
             className={`${imageClass} ${
               (index + 1) % 2 == 0 ? "-rotate-3" : "rotate-3"
-            }`}
-            src={img}
+            } group-hover:blur-sm`}
+            style={{
+              backgroundImage: `url(${img.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           />
-        );
-      })}
-      <div className=" relative bg-[#212121] w-full h-full"></div>
+          <div className="text-center font-bold hidden group-hover:flex absolute inset-0 bg-opacity-50 text-white items-center justify-center p-1">
+            {img.desc}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

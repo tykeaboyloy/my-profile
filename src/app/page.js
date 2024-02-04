@@ -4,15 +4,11 @@ import FeaturedPosts from "../components/Home/FeaturedPosts";
 import RecentPosts from "../components/Home/RecentPosts";
 import PersonalDetails from "../components/Home/PersonalDetails";
 import PersonalGalery from "../components/Home/PersonalGalllery";
-import gallery_1 from "../../public/gallery/gallery_1.jpg";
-import gallery_2 from "../../public/gallery/gallery_2.jpg";
-import gallery_3 from "../../public/gallery/gallery_3.jpg";
-import gallery_4 from "../../public/gallery/gallery_4.jpg";
-import gallery_5 from "../../public/gallery/gallery_5.jpg";
+import images from "./../../public/gallery/index";
 export default function Home() {
-  const personalImage = [gallery_1, gallery_2, gallery_3, gallery_4, gallery_5];
+  const personalImage = images;
   return (
-    <div className="sm:mx-8 md:mx-12 dark:bg-[#212121]">
+    <div className="sm:mx-8 md:mx-14 border-x-[1px] border-zinc-100 dark:border-zinc-300/20 dark:bg-dark bg-[#fff]">
       <PersonalDetails
         header="Fullstack developer, DevOps, and future CEO/Entrepeneur."
         name="TK"
@@ -21,7 +17,7 @@ export default function Home() {
         to build my skillset."
       />
       <PersonalGalery images={personalImage} />
-      <main className="flex flex-col items-center justify-center mt-5">
+      <main className="flex flex-col items-center justify-center mt-12">
         <HomeCoverSection blogs={allBlogs} />
         <FeaturedPosts blogs={allBlogs} />
         <RecentPosts blogs={allBlogs} />

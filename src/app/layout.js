@@ -60,8 +60,7 @@ export default function RootLayout({ children }) {
         className={cx(
           inter.variable,
           manrope.variable,
-          "font-mr bg-light dark:bg-dark"
-          // "font-mr bg-[#f5f5f5] dark:bg-black"
+          "font-mr dark:bg-dark sm:dark:bg-[#000000] bg-zinc-100"
         )}
       >
         <Script id="theme-switcher">
@@ -71,11 +70,9 @@ export default function RootLayout({ children }) {
           document.documentElement.classList.remove('dark')
         }`}
         </Script>
-        {/* <div className="dark:bg-dark md:mx-28 dark:border bg-light border-[#3a3b3c] shadow-sm"> */}
         <Header />
         {children}
         <Footer />
-        {/* </div> */}
       </body>
     </html>
   );

@@ -1,17 +1,10 @@
 import Logo from "../Header/Logo";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  MoonIcon,
-  SunIcon,
-  TwitterIcon,
-  FacebookIcon,
-} from "../Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon, FacebookIcon } from "../Icons";
 import siteMetadata from "@/src/utils/siteMetaData";
 import PropType from "prop-types";
 const PersonalDetail = (props) => {
   return (
-    <div className="dark:bg-dark text-dark dark:text-light p-5 mx-5 md:mx-11 md:p-11">
+    <div className=" text-dark dark:text-light p-5 md:p-11">
       <Logo name={props.name} />
       <h1 className="font-bold text-3xl md:text-4xl mt-6 max-w-xl">
         {props.header}

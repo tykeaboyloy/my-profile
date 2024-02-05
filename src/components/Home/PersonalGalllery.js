@@ -1,11 +1,26 @@
+"use client";
 import PropTypes from "prop-types";
+import React, { useEffect, useRef, useState } from "react";
 
 const PersonalGalery = ({ images }) => {
+  const scrollRef = useRef(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   const imageClass =
     "rounded-2xl p-2 transform w-44 sm:w-64 min-w-[176px] sm:min-w-[256px] h-56 sm:h-80 object-cover group relative";
 
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 4; // Adjust this value as needed
+      setIsLoaded(true);
+    }
+  }, []);
   return (
-    <div className="flex overflow-hidden py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-center">
+    <div
+      ref={scrollRef}
+      className={`flex overflow-x-scroll py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-start ${
+        isLoaded ? "" : "invisible"
+      }`}
+    >
       {images.map((img, index) => (
         <div className="group relative" key={index}>
           <div

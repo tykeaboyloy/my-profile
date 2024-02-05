@@ -6,6 +6,16 @@ html{
     scroll-behavior: smooth;
 }
 
+/* In App.css */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 h1>a>.icon.icon-link:before,
 h2>a>.icon.icon-link:before,
 h3>a>.icon.icon-link:before{
@@ -79,5 +89,6 @@ code {
     font-size: 1rem;
     color: #747474;
   }
+
 
 

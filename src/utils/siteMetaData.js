@@ -1,9 +1,9 @@
 // please update required information
 const siteMetadata = {
-  title: "Tykea",
-  author: "Tykea",
+  title: "Tykea Ly",
+  author: "Tykea Ly",
   headerTitle: "Tykea's personal website",
-  description: "A personal and blog website created with Next.js.",
+  description: "A personal blog website.",
   language: "en-us",
   theme: "system", // system, dark or light
   siteUrl: "https://tykea.dev", // your website URL

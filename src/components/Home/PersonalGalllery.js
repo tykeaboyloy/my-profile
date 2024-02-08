@@ -17,7 +17,7 @@ const PersonalGalery = ({ images }) => {
   return (
     <div
       ref={scrollRef}
-      className={`flex scroll-smooth overflow-x-auto py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-start hide-scrollbar ${
+      className={`flex scroll-smooth overflow-x-auto py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-start lg:justify-center hide-scrollbar ${
         isLoaded ? "" : "invisible"
       }`}
     >
@@ -36,6 +36,7 @@ const PersonalGalery = ({ images }) => {
           <div className="text-center font-bold hidden group-hover:flex absolute inset-0 bg-opacity-50 text-white items-center justify-center p-1">
             {img.desc}
           </div>
+          p
         </div>
       ))}
     </div>

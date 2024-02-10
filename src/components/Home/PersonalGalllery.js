@@ -36,7 +36,6 @@ const PersonalGalery = ({ images }) => {
           <div className="text-center font-bold hidden group-hover:flex absolute inset-0 bg-opacity-50 text-white items-center justify-center p-1">
             {img.desc}
           </div>
-          p
         </div>
       ))}
     </div>

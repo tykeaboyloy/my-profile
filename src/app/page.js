@@ -12,15 +12,19 @@ export default function Home() {
       <PersonalDetails
         header="Fullstack developer, DevOps, and future CEO/Entrepeneur."
         name="TK"
-        detail="I am a fullstack developer, DevOps, and future CEO/Entrepeneur. I am
-        currently working on my startup, and learning new technologies
-        to build my skillset."
+        detail="As passionate software engineer, 
+        I thrive on new challenges and continuous learning. 
+        I specialize in Ruby on Rails and Next.js, aiming to contribute to innovative projects."
       />
       <PersonalGalery images={personalImage} />
       <main className="flex flex-col items-center justify-center mt-12">
-        <HomeCoverSection blogs={allBlogs} />
-        <FeaturedPosts blogs={allBlogs} />
-        <RecentPosts blogs={allBlogs} />
+        {/* <HomeCoverSection blogs={allBlogs} /> */}
+        {/* <FeaturedPosts blogs={allBlogs} /> */}
+        {/* <RecentPosts blogs={allBlogs} /> */}
+        <pre className="dark:text-white text-black px-4 pb-8">
+          {" "}
+          Something big is coming soon...{" "}
+        </pre>
       </main>
     </div>
   );

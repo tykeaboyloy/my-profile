@@ -20,8 +20,7 @@ const Footer = () => {
         Interesting Stories | Updates | Guides
       </h3>
       <p className="mt-5 px-4 text-center w-full sm:w-3/5 font-light dark:font-medium text-sm sm:text-base">
-        Subscribe to learn about new technology and updates. Join over 5000+
-        members community to stay up to date with latest news.
+        Subscribe to learn about new technology and updates.
       </p>
 
       <form
@@ -92,7 +91,9 @@ const Footer = () => {
         >
           sitemap.xml
         </Link>
-        <div className="text-center">Made with 💗 and ☕️</div>
+        <div className="text-center">
+          {"Made with Lerb ( 💔 ) and Koffee ( ☕️ )"}
+        </div>
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ const PersonalDetail = (props) => {
       <h1 className="font-bold text-3xl md:text-4xl mt-6 max-w-xl">
         {props.header}
       </h1>
-      <p className="mt-7 text-md md:text-lg max-w-2xl text-gray">
+      <p className=" mt-7 text-md md:text-lg max-w-2xl text-gray">
         {props.detail}
       </p>
 

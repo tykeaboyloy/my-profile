@@ -28,7 +28,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className=" p-4 px-5 sm:px-10 flex justify-end items-center sm:mx-8 md:mx-14 dark:bg-dark bg-[#fff] border-x-[1px] border-zinc-100 dark:border-zinc-300/20">
+    <header className=" p-4 px-5 sm:px-10 flex justify-end items-center dark:bg-dark bg-[#fff] ">
       <button
         className="inline-block md:hidden z-50 mx-7"
         onClick={toggle}
@@ -81,10 +81,10 @@ const Header = () => {
         <Link href="/" className="mr-2">
           Home
         </Link>
-        <Link href="/about" className="mx-2">
+        <Link href="/" className="mx-2 opacity-40">
           About
         </Link>
-        <Link href="/contact" className="mx-2">
+        <Link href="/" className="mx-2 opacity-40">
           Contact
         </Link>
       </nav>
@@ -96,10 +96,10 @@ const Header = () => {
         <Link href="/" className="mr-2">
           Home
         </Link>
-        <Link href="/about" className="mx-2">
+        <Link href="/" className="mx-2 opacity-40">
           About
         </Link>
-        <Link href="/contact" className="mx-2">
+        <Link href="/" className="mx-2 opacity-40">
           Contact
         </Link>
       </nav>

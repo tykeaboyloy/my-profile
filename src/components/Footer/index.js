@@ -15,7 +15,7 @@ const Footer = () => {
   console.log(errors);
 
   return (
-    <footer className="sm:rounded-2xl rounded-t-2xl bg-dark dark:bg-accentDark/90 sm:mx-5 flex flex-col items-center text-light dark:text-dark ">
+    <footer className="rounded-t-2xl bg-dark dark:bg-accentDark/90 flex flex-col items-center text-light dark:text-dark ">
       <h3 className="mt-16 font-medium dark:font-bold text-center capitalize text-2xl sm:text-3xl lg:text-4xl px-4">
         Interesting Stories | Updates | Guides
       </h3>

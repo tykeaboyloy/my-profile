@@ -17,7 +17,7 @@ const PersonalGalery = ({ images }) => {
   return (
     <div
       ref={scrollRef}
-      className={`flex scroll-smooth overflow-x-auto py-5 space-x-5 md:space-x-12 sm:-mx-8 md:-mx-14 my-3 bg-transparent justify-start lg:justify-center hide-scrollbar ${
+      className={`flex scroll-smooth overflow-x-auto py-5 space-x-5 md:space-x-12 my-3 bg-transparent justify-start lg:justify-center hide-scrollbar ${
         isLoaded ? "" : "invisible"
       }`}
     >

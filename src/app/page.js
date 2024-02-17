@@ -8,13 +8,14 @@ import images from "./../../public/gallery/index";
 export default function Home() {
   const personalImage = images;
   return (
-    <div className="sm:mx-8 md:mx-14 border-x-[1px] border-zinc-100 dark:border-zinc-300/20 dark:bg-dark bg-[#fff]">
+    <div className=" dark:bg-dark bg-[#fff]">
       <PersonalDetails
-        header="Fullstack developer, DevOps, and future CEO/Entrepeneur."
+        header="CS Student | Reader | Software Engineer"
         name="TK"
-        detail="As passionate software engineer, 
-        I thrive on new challenges and continuous learning. 
-        I specialize in Ruby on Rails and Next.js, aiming to contribute to innovative projects."
+        detail="As a passionate full-stack developer, 
+        I'm always on the lookout for challenges and learning opportunities. 
+        I have a solid foundation in Ruby on Rails and Next.js, 
+        and aim to contribute to innovative projects."
       />
       <PersonalGalery images={personalImage} />
       <main className="flex flex-col items-center justify-center mt-12">
@@ -23,7 +24,7 @@ export default function Home() {
         {/* <RecentPosts blogs={allBlogs} /> */}
         <pre className="dark:text-white text-black px-4 pb-8">
           {" "}
-          Something big is coming soon...{" "}
+          Something big is coming...{" "}
         </pre>
       </main>
     </div>

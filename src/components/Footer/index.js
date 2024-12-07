@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { FacebookIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
+import { FacebookIcon, GithubIcon, LinkedinIcon, TwitterIcon, NotByAI } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 import Image from "next/image"
@@ -85,17 +85,11 @@ const Footer = () => {
           />
         </a>
       </div>
-      {
-        mode === "light" ? (
-          <div className="mt-10">
-            <Image width={120} height={10} src="/Developed-By-Human-Not-By-AI-Badge-white@2x.png" ></Image>
-          </div>
-        ) : (
-          <div className="mt-10">
-            <Image width={120} height={10} src="/Developed-By-Human-Not-By-AI-Badge-black@2x.png" ></Image>
-          </div>
-        )
-      }
+      <div className="mt-10">
+        <a href="https://notbyai.fyi" target="_blank" >
+          <NotByAI />
+        </a>
+      </div>
       <div className="w-full mt-6 md:mt-14 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
         <span className="text-center">Amazing</span>
         <Link
